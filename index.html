@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Origami Clicker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Origami Clicker</h1>
+
+    <!--This div contains the auto click images-->
+    <div id="auto-clicks-container">
+      <h3 id="auto-click-heading">Auto Clicks</h3><br>
+      <img src="https://tse3.mm.bing.net/th?id=OIP.OntkhDlT4W3Z4Gh-FnBHJQHaFj&pid=15.1&P=0&w=232&h=175"
+           class="auto-clicks"
+           id="auto-click">
+
+      <img src="http://www.giladorigami.com/P_Bat_Engel_Odyssey.JPG"
+           class="auto-clicks"
+           id="auto-click-two">
+
+      <img src="http://goorigami.com/wp-content/uploads/2016/02/110808-Pre-Columbian-Frog-05110-550x550.jpg"
+           class="auto-clicks"
+           id="auto-click-three">
+
+      <img src="https://i.pinimg.com/originals/ad/17/a4/ad17a46c3ab5703e3636d42981fc491d.jpg"
+           class="auto-clicks"
+           id="auto-click-four">
+    </div>
+
+    <button id="reset-points" type="button">Reset Game</button><br>
+
+    <!--This are the images that have to be clicked manually-->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95MhIKAbXH6CVXnxo8w6-Bknk3r0YvVcP-rCyb_F1RgjMASbO"
+         class="pic"
+         id="add-point">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSR5FNQc2fvFUslytEIQQVMfQrtYZec4FNKkrrvQv7HRxOHR9Zw"
+         class="pic"
+         id="add-two-points">
+
+    <img src="https://graceincrease.com/wp-content/uploads/2016/02/green-paper-origami-crane-600x600.jpg"
+         class="pic"
+         id="add-three-points">
+
+    <img src="https://tse3.mm.bing.net/th?id=OIP.BgSr75xDai39kKtXPrQrtwHaEK&pid=15.1&P=0&w=281&h=159"
+         class="pic"
+         id="add-four-points">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmNtXpj65ceouqJZAX5q8bWdme3-RlKkYq4qZZWqDSLSZvJStqYA"
+         class="pic"
+         id="add-five-points"><br>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_mNWQ4O9m2SclGjA1uBbr-5GPJmFXXPg452Wuu3VvTYb5VXz"
+         class="pic"
+         id="add-ten-points">
+
+    <img src="https://i.pinimg.com/736x/68/53/db/6853db62b11f8542495f2c2adf27b5a3--origami-animals-manners.jpg"
+         class="pic"
+         id="add-twenty-points">
+
+    <img src="https://3joj3d3qddoejique3e7i6px-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/origami-ancient-dragon.jpg"
+         class="pic"
+         id="add-thirty-points">
+
+    <img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
+         class="pic"
+         id="add-eighty-points">
+
+    <img src="https://singaporecraft.files.wordpress.com/2013/11/p1090144-crop.jpg"
+         class="pic"
+         id="add-onehundredtwenty-points"><br>
+
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/82/37/0a82370c02e935e02d44aa010ffd0867.jpg"
+         class="pic"
+         id="add-twohundred-points">
+
+    <!--This div contains the points-->
+    <div id="number-of-clicks">You have 0 points</div>
+
+    <!--These are the instructions on how to play-->
+    <p>
+    <strong>
+    How To Play: Click on the origami images to earn points. If you get enough points, you will unlock new origami that give more points.<br>
+    There are also auto clicks that you can unlock that show up in the green rectangle. You can reset your points by pressing the <em>Reset Game</em><br>
+    button.
+    </strong>
+    </p>
+
+    <!--This is the table that shows the origami that has to be clicked.-->
+    <div id="click-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="type-of-origami">Type of Origami</th>
+            <th class="number-of-points">Number of Points</th>
+            <th class="when-unlocked">When Unlocked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="type-of-origami">Airplane</td>
+            <td class="number-of-points">1</td>
+            <td class="when-unlocked">0 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami" >Boat</td>
+            <td class="number-of-points">2</td>
+            <td class="when-unlocked">50 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Bird</td>
+            <td class="number-of-points">3</td>
+            <td class="when-unlocked">500 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Wolf</td>
+            <td class="number-of-points">4</td>
+            <td class="when-unlocked">1,300 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Dragon</td>
+            <td class="number-of-points">5</td>
+            <td class="when-unlocked">2,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Fighter Jet</td>
+            <td class="number-of-points">10</td>
+            <td class="when-unlocked">4,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">T-Rex</td>
+            <td class="number-of-points">20</td>
+            <td class="when-unlocked">10,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Fiery Dragon</td>
+            <td class="number-of-points">30</td>
+            <td class="when-unlocked">18,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">3D Origami Swan</td>
+            <td class="number-of-points">80</td>
+            <td class="when-unlocked">30,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Owl</td>
+            <td class="number-of-points">120</td>
+            <td class="when-unlocked">52,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Horse</td>
+            <td class="number-of-points">200</td>
+            <td class="when-unlocked">100,000 points</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Auto Click Table</h2>
+
+      <!--This is the auto click table-->
+      <table>
+        <thead>
+          <tr>
+            <th class="type-of-origami">Type of Origami</th>
+            <th class="number-of-points">Number of Points</th>
+            <th class="when-unlocked">When Unlocked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="type-of-origami">Dog</td>
+            <td class="number-of-points">1 point per second</td>
+            <td class="when-unlocked">100 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Bat</td>
+            <td class="number-of-points">3 points per second</td>
+            <td class="when-unlocked">1,000 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Frog</td>
+            <td class="number-of-points">4 points per second</td>
+            <td class="when-unlocked">6,500 points</td>
+          </tr>
+          <tr>
+            <td class="type-of-origami">Crocodile</td>
+            <td class="number-of-points">7 points per second</td>
+            <td class="when-unlocked">150,000 points</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--This is the JavaScript for the game(See main.js)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
