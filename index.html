@@ -3,87 +3,168 @@
   <head>
     <meta charset="utf-8">
     <title>Origami Clicker</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background-color: rgb(0, 255, 255);
+      }
+
+      h1 {
+        font-family: "impact", serif;
+      }
+
+      p {
+        color: rgb(255, 127, 0);
+      }
+
+      a {
+        color: rgb(0, 255, 0);
+      }
+
+      div {
+        color: rgb(0, 0, 255);
+      }
+
+      table {
+        color: rgb(0, 0, 255);
+        margin: auto;
+      }
+
+      button {
+        background-color: rgb(255, 255, 0);
+      }
+
+      button:hover {
+        background-color: rgb(255, 255, 255);
+      }
+
+      #reset-points {
+        border: 6px double rgb(0, 0, 255);
+        color: rgb(0, 0, 255);
+      }
+
+      #auto-click-heading {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+
+      #auto-clicks-container {
+        background-color: rgb(0, 255, 0);
+        width: 10%;
+        float: right;
+      }
+
+      #click-table {
+        background-color: rgb(115, 155, 155);
+        height: 300px;
+        width: 300px;
+        overflow-y: auto;
+        padding: 10px 10px 10px 10px;
+      }
+
+      .auto-clicks {
+        float: right;
+        width: 90%;
+      }
+
+      .pic {
+        height: 70px
+      }
+
+      .type-of-origami {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .number-of-points {
+        background-color: rgb(255, 127, 0);
+      }
+
+      .required-to-unlock,.cost {
+        background-color: rgb(255, 255, 0);
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Origami Clicker Game</h1>
+    <h1>Origami Clicker</h1>
 
     <!--This div contains the auto click images-->
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
       <img src="https://tse3.mm.bing.net/th?id=OIP.OntkhDlT4W3Z4Gh-FnBHJQHaFj&pid=15.1&P=0&w=232&h=175"
-           class="auto-clicks"
-           id="auto-click">
+      class="auto-clicks"
+      id="auto-click">
 
       <img src="http://www.giladorigami.com/P_Bat_Engel_Odyssey.JPG"
-           class="auto-clicks"
-           id="auto-click-two">
+      class="auto-clicks"
+      id="auto-click-2">
 
       <img src="http://goorigami.com/wp-content/uploads/2016/02/110808-Pre-Columbian-Frog-05110-550x550.jpg"
-           class="auto-clicks"
-           id="auto-click-three">
+      class="auto-clicks"
+      id="auto-click-3">
 
       <img src="https://i.pinimg.com/originals/ad/17/a4/ad17a46c3ab5703e3636d42981fc491d.jpg"
-           class="auto-clicks"
-           id="auto-click-four">
+      class="auto-clicks"
+      id="auto-click-4">
     </div>
 
     <button id="reset-points" type="button">Reset Game</button><br>
 
     <!--This are the images that have to be clicked manually-->
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95MhIKAbXH6CVXnxo8w6-Bknk3r0YvVcP-rCyb_F1RgjMASbO"
-         class="pic"
-         id="add-point">
+    class="pic"
+    id="plane">
 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSR5FNQc2fvFUslytEIQQVMfQrtYZec4FNKkrrvQv7HRxOHR9Zw"
-         class="pic"
-         id="add-two-points">
+    class="pic"
+    id="boat">
 
     <img src="https://graceincrease.com/wp-content/uploads/2016/02/green-paper-origami-crane-600x600.jpg"
-         class="pic"
-         id="add-three-points">
+    class="pic"
+    id="bird">
 
     <img src="https://tse3.mm.bing.net/th?id=OIP.BgSr75xDai39kKtXPrQrtwHaEK&pid=15.1&P=0&w=281&h=159"
-         class="pic"
-         id="add-four-points">
+    class="pic"
+    id="wolf">
 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmNtXpj65ceouqJZAX5q8bWdme3-RlKkYq4qZZWqDSLSZvJStqYA"
-         class="pic"
-         id="add-five-points"><br>
+    class="pic"
+    id="dragon"><br>
 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_mNWQ4O9m2SclGjA1uBbr-5GPJmFXXPg452Wuu3VvTYb5VXz"
-         class="pic"
-         id="add-ten-points">
+    class="pic"
+    id="fighter-jet">
 
     <img src="https://i.pinimg.com/736x/68/53/db/6853db62b11f8542495f2c2adf27b5a3--origami-animals-manners.jpg"
-         class="pic"
-         id="add-twenty-points">
+    class="pic"
+    id="t-rex">
 
     <img src="https://3joj3d3qddoejique3e7i6px-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/origami-ancient-dragon.jpg"
-         class="pic"
-         id="add-thirty-points">
+    class="pic"
+    id="fiery-dragon">
 
-    <img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
-         class="pic"
-         id="add-eighty-points">
+<img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
+    class="pic"
+    id="3d-swan">
 
     <img src="https://singaporecraft.files.wordpress.com/2013/11/p1090144-crop.jpg"
-         class="pic"
-         id="add-onehundredtwenty-points"><br>
+    class="pic"
+    id="add-120-points"><br>
 
     <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/82/37/0a82370c02e935e02d44aa010ffd0867.jpg"
-         class="pic"
-         id="add-twohundred-points">
+    class="pic"
+    id="horse">
 
     <!--This div contains the points-->
-    <div id="number-of-clicks">You have 0 points</div>
+    <div id="number-of-clicks"></div>
 
     <!--These are the instructions on how to play-->
     <p>
     <strong>
-    How To Play: Click on the origami images to earn points. If you get enough points, you will unlock new origami that give more points.<br>
-    There are also auto clicks that you can unlock that show up in the green rectangle. You can reset your points by pressing the <em>Reset Game</em><br>
-    button.
+    How To Play: Click on the origami images to earn points. If you get enough points, you will unlock <br>
+    new origami that give more points.There are also auto clicks that you can buy that show up in the green rectangle. <br>
+    If your points go below the required amount to unlock an origami image, you won't lose the image. You can <br>
+    reset your game by pressing the <em>Reset Game</em> button.
     </strong>
     </p>
 
@@ -94,64 +175,64 @@
           <tr>
             <th class="type-of-origami">Type of Origami</th>
             <th class="number-of-points">Number of Points</th>
-            <th class="when-unlocked">When Unlocked</th>
+            <th class="required-to-unlock">Required to Unlock</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="type-of-origami">Airplane</td>
             <td class="number-of-points">1</td>
-            <td class="when-unlocked">0 points</td>
+            <td class="required-to-unlock">0 points</td>
           </tr>
           <tr>
             <td class="type-of-origami" >Boat</td>
-            <td class="number-of-points">2</td>
-            <td class="when-unlocked">50 points</td>
+            <td class="number-of-points">3</td>
+            <td class="required-to-unlock">50 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Bird</td>
-            <td class="number-of-points">3</td>
-            <td class="when-unlocked">500 points</td>
+            <td class="number-of-points">6</td>
+            <td class="required-to-unlock">500 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Wolf</td>
-            <td class="number-of-points">4</td>
-            <td class="when-unlocked">1,300 points</td>
+            <td class="number-of-points">10</td>
+            <td class="required-to-unlock">1,650 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Dragon</td>
-            <td class="number-of-points">5</td>
-            <td class="when-unlocked">2,000 points</td>
+            <td class="number-of-points">15</td>
+            <td class="required-to-unlock">2,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Fighter Jet</td>
-            <td class="number-of-points">10</td>
-            <td class="when-unlocked">4,000 points</td>
+            <td class="number-of-points">25</td>
+            <td class="required-to-unlock">4,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">T-Rex</td>
-            <td class="number-of-points">20</td>
-            <td class="when-unlocked">10,000 points</td>
+            <td class="number-of-points">45</td>
+            <td class="required-to-unlock">10,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Fiery Dragon</td>
-            <td class="number-of-points">30</td>
-            <td class="when-unlocked">18,000 points</td>
+            <td class="number-of-points">75</td>
+            <td class="required-to-unlock">18,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">3D Origami Swan</td>
-            <td class="number-of-points">80</td>
-            <td class="when-unlocked">30,000 points</td>
+            <td class="number-of-points">155</td>
+            <td class="required-to-unlock">30,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Owl</td>
-            <td class="number-of-points">120</td>
-            <td class="when-unlocked">52,000 points</td>
+            <td class="number-of-points">275</td>
+            <td class="required-to-unlock">52,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Horse</td>
-            <td class="number-of-points">200</td>
-            <td class="when-unlocked">100,000 points</td>
+            <td class="number-of-points">475</td>
+            <td class="required-to-unlock">100,000 points</td>
           </tr>
         </tbody>
       </table>
@@ -164,29 +245,29 @@
           <tr>
             <th class="type-of-origami">Type of Origami</th>
             <th class="number-of-points">Number of Points</th>
-            <th class="when-unlocked">When Unlocked</th>
+            <th class="cost">Cost</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="type-of-origami">Dog</td>
             <td class="number-of-points">1 point per second</td>
-            <td class="when-unlocked">100 points</td>
+            <td class="cost">100 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Bat</td>
             <td class="number-of-points">3 points per second</td>
-            <td class="when-unlocked">1,000 points</td>
+            <td class="cost">1,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Frog</td>
             <td class="number-of-points">4 points per second</td>
-            <td class="when-unlocked">6,500 points</td>
+            <td class="cost">6,500 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">Crocodile</td>
             <td class="number-of-points">7 points per second</td>
-            <td class="when-unlocked">150,000 points</td>
+            <td class="cost">150,000 points</td>
           </tr>
         </tbody>
       </table>
@@ -194,6 +275,417 @@
 
     <!--This is the JavaScript for the game(See main.js)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script>
+
+
+    var points = 0;
+    $("#number-of-clicks").text("You have " + points + " points");
+
+
+      //These functions decide if the origami images(including auto clicks) are going to be shown or not
+      var showBoat = function() {
+        if (points > 50) {
+          $("#boat").show();
+        } else {
+          $("#boat").hide();
+        }
+      };
+
+      var showAutoClick = function() {
+        if (points > 100) {
+          $("#auto-click").show();
+        } else {
+          $("#auto-click").hide();
+        }
+      };
+
+      var showBird = function() {
+        if (points > 500) {
+          $("#bird").show();
+        } else {
+          $("#bird").hide();
+        }
+      };
+
+      var showAutoClickTwo = function() {
+        if (points > 1000) {
+          $("#auto-click-2").show();
+        } else {
+          $("#auto-click-2").hide();
+        }
+      };
+
+      var showWolf = function() {
+        if (points > 1650) {
+          $("#wolf").show();
+        } else {
+          $("#wolf").hide();
+        }
+      };
+
+      var showDragon = function() {
+        if (points > 3000) {
+          $("#dragon").show();
+        } else {
+          $("#dragon").hide();
+        }
+      };
+
+      var showFighterJet = function() {
+        if (points > 6000) {
+          $("#fighter-jet").show();
+        } else {
+          $("#fighter-jet").hide();
+        }
+      };
+
+      var showAutoClickThree = function() {
+        if (points > 6500) {
+          $("#auto-click-3").show();
+        } else {
+          $("#auto-click-3").hide();
+        }
+      };
+
+      var showTRex = function() {
+        if (points > 11500) {
+          $("#t-rex").show();
+        } else {
+          $("#t-rex").hide();
+        }
+      };
+
+      var showFieryDragon = function() {
+        if (points > 18000) {
+          $("#fiery-dragon").show();
+        } else {
+          $("#fiery-dragon").hide();
+        }
+      };
+
+      var show3DSwan = function() {
+        if (points > 30000) {
+          $("#3d-swan").show();
+        } else {
+          $("#3d-swan").hide();
+        }
+      };
+
+      var showOwl = function() {
+        if (points > 52000) {
+          $("#add-120-points").show();
+        } else {
+          $("#add-120-points").hide();
+        }
+      };
+
+      var showHorse = function() {
+        if (points > 100000) {
+          $("#horse").show();
+        } else {
+          $("#horse").hide();
+        }
+      };
+
+      var showAutoClickFour = function() {
+        if (points > 150000) {
+          $("#auto-click-4").show();
+        } else {
+          $("#auto-click-4").hide();
+        }
+      };
+
+      showBoat();
+      showAutoClick();
+      showBird();
+      showAutoClickTwo();
+      showWolf();
+      showDragon();
+      showFighterJet();
+      showAutoClickThree();
+      showTRex();
+      showFieryDragon();
+      show3DSwan();
+      showOwl();
+      showHorse();
+      showAutoClickFour();
+
+
+      var increaseAutoClick = function() {
+        points -= 100;
+        $("#number-of-clicks").text("You have " + points + " points");
+        showAutoClick();
+        showAutoClickTwo();
+        showAutoClickThree();
+        showAutoClickFour();
+        var autoClick = setInterval(function() {
+          points += 1;
+          $("#number-of-clicks").text("You have " + points + " points");
+          showAutoClick();
+          showAutoClickTwo();
+          showAutoClickThree();
+          showAutoClickFour();
+        }, 1000);
+      };
+
+      var increaseAutoClickTwo = function() {
+        points -= 1000;
+        $("#number-of-clicks").text("You have " + points + " points");
+        showAutoClick();
+        showAutoClickTwo();
+        showAutoClickThree();
+        showAutoClickFour();
+        var autoClick = setInterval(function() {
+          points += 3;
+          $("#number-of-clicks").text("You have " + points + " points");
+          showAutoClick();
+          showAutoClickTwo();
+          showAutoClickThree();
+          showAutoClickFour();
+        }, 1000);
+      };
+
+      var increaseAutoClickThree = function() {
+        points -= 6500;
+        $("#number-of-clicks").text("You have " + points + " points");
+        showAutoClick();
+        showAutoClickTwo();
+        showAutoClickThree();
+        showAutoClickFour();
+        var autoClick = setInterval(function() {
+          points += 4;
+          $("#number-of-clicks").text("You have " + points + " points");
+          showAutoClick();
+          showAutoClickTwo();
+          showAutoClickThree();
+          showAutoClickFour();
+        }, 1000);
+      };
+
+      var increaseAutoClickFour = function() {
+        points -= 150000;
+        $("#number-of-clicks").text("You have " + points + " points");
+        showAutoClick();
+        showAutoClickTwo();
+        showAutoClickThree();
+        showAutoClickFour();
+        var autoClick = setInterval(function() {
+          points += 7;
+          $("#number-of-clicks").text("You have " + points + " points");
+          showAutoClick();
+          showAutoClickTwo();
+          showAutoClickThree();
+          showAutoClickFour();
+        }, 1000);
+      };
+
+      var planeClicked = function() {
+        points+= 1;
+        showBoat();
+        showAutoClick();
+        showBird();
+        showAutoClickTwo();
+        showWolf();
+        showDragon();
+        showFighterJet();
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var boatClicked = function() {
+        points += 3;
+        showAutoClick();
+        showBird();
+        showAutoClickTwo();
+        showWolf();
+        showDragon();
+        showFighterJet();
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var birdClicked = function() {
+        points += 6;
+        showAutoClick();
+        showAutoClickTwo();
+        showWolf();
+        showDragon();
+        showFighterJet();
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var wolfClicked = function() {
+        points += 10;
+        showDragon();
+        showFighterJet();
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var dragonClicked = function() {
+        points += 15;
+        showFighterJet();
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var fighterJetClicked = function() {
+        points += 25;
+        showAutoClickThree();
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var tRexClicked = function() {
+        points += 45;
+        showTRex();
+        showFieryDragon();
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var fieryDragonClicked = function() {
+        points += 75;
+        show3DSwan();
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var swanClicked = function() {
+        points += 155;
+        showOwl();
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var owlClicked = function() {
+        points += 275;
+        showHorse();
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var horseClicked = function() {
+        points += 475;
+        showAutoClickFour();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      $("#reset-points").on("click", function() {
+        window.location.assign(window.location.href); //Refreshes the page and all the values are cleared
+      });
+
+      $("#auto-click").on("click", function() {
+          increaseAutoClick();
+          showAutoClick();
+      });
+
+      $("#auto-click-2").on("click", function() {
+          increaseAutoClickTwo();
+          showAutoClickTwo();
+          showAutoClick();
+      });
+
+      $("#auto-click-3").on("click", function() {
+          increaseAutoClickThree();
+          showAutoClickThree();
+          showAutoClickTwo();
+          showAutoClick();
+      });
+
+      $("#auto-click-4").on("click", function() {
+          increaseAutoClickFour();
+          showAutoClickFour();
+          showAutoClickThree();
+          showAutoClickTwo();
+          showAutoClick();
+      });
+
+      $("#plane").on("click", function() {
+        planeClicked();
+      });
+
+      $("#boat").on("click", function() {
+        boatClicked();
+      });
+
+      $("#bird").on("click", function() {
+        birdClicked();
+      });
+
+      $("#wolf").on("click", function() {
+        wolfClicked();
+      });
+
+      $("#dragon").on("click", function() {
+        dragonClicked();
+      });
+
+      $("#fighter-jet").on("click", function() {
+        fighterJetClicked();
+      });
+
+      $("#t-rex").on("click", function() {
+        tRexClicked();
+      });
+
+      $("#fiery-dragon").on("click", function() {
+        fieryDragonClicked();
+      });
+
+      $("#3d-swan").on("click", function() {
+        swanClicked();
+      });
+
+      $("#add-120-points").on("click", function() {
+        owlClicked();
+      });
+
+      $("#horse").on("click", function() {
+        horseClicked();
+      });
+    </script>
   </body>
 </html>
