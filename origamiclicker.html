@@ -94,8 +94,6 @@
   <body>
     <h1>Origami Clicker Game</h1>
 
-    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
-
     <!--This div contains the auto click images-->
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
@@ -103,7 +101,7 @@
       class="auto-clicks"
       id="auto-click">
 
-      <img src="http://www.giladorigami.com/P_Bat_Engel_Odyssey.JPG"
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsd4-ZzHUEkENRY2zgKP1-RxqSAPxm2PhGCy8nrZYNfL9CCQSH"
       class="auto-clicks"
       id="auto-click-2">
 
@@ -114,7 +112,13 @@
       <img src="https://i.pinimg.com/originals/ad/17/a4/ad17a46c3ab5703e3636d42981fc491d.jpg"
       class="auto-clicks"
       id="auto-click-4">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfWZKQKnItDRqOyHl7EOpFdEve2Y29Kped2friXcxJDqEUJGrv5A"
+      class="auto-clicks"
+      id="auto-click-5">
     </div>
+
+    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page.</p>
 
     <button id="reset-points" type="button">Reset Game</button><br>
 
@@ -151,13 +155,13 @@
     class="pic"
     id="fiery-dragon">
 
-<img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
+    <img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
     class="pic"
     id="3d-swan">
 
     <img src="https://singaporecraft.files.wordpress.com/2013/11/p1090144-crop.jpg"
     class="pic"
-    id="add-120-points"><br>
+    id="owl"><br>
 
     <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/82/37/0a82370c02e935e02d44aa010ffd0867.jpg"
     class="pic"
@@ -213,7 +217,7 @@
           <tr>
             <td class="type-of-origami">Fighter Jet</td>
             <td class="number-of-points">25</td>
-            <td class="required-to-unlock">4,000 points</td>
+            <td class="required-to-unlock">6,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">T-Rex</td>
@@ -385,11 +389,19 @@
         }
       };
 
+      var showAutoClickFive = function() {
+        if (points >= 35000) {
+          $("#auto-click-5").show();
+        } else {
+          $("#auto-click-5").hide();
+        }
+      };
+
       var showOwl = function() {
         if (points >= 52000) {
-          $("#add-120-points").show();
+          $("#owl").show();
         } else {
-          $("#add-120-points").hide();
+          $("#owl").hide();
         }
       };
 
@@ -411,11 +423,11 @@
       showAutoClickThree();
       showTRex();
       showFieryDragon();
-      show3DSwan();
       showAutoClickFour();
+      show3DSwan();
+      showAutoClickFive();
       showOwl();
       showHorse();
-
 
       var increaseAutoClick = function() {
         points -= 100;
@@ -424,6 +436,7 @@
         showAutoClickTwo();
         showAutoClickThree();
         showAutoClickFour();
+        showAutoClickFive();
         var autoClick = setInterval(function() {
           points += 1;
           $("#number-of-clicks").text("You have " + points + " points");
@@ -431,6 +444,7 @@
           showAutoClickTwo();
           showAutoClickThree();
           showAutoClickFour();
+          showAutoClickFive();
         }, 1000);
       };
 
@@ -441,6 +455,7 @@
         showAutoClickTwo();
         showAutoClickThree();
         showAutoClickFour();
+        showAutoClickFive();
         var autoClick = setInterval(function() {
           points += 3;
           $("#number-of-clicks").text("You have " + points + " points");
@@ -448,6 +463,7 @@
           showAutoClickTwo();
           showAutoClickThree();
           showAutoClickFour();
+          showAutoClickFive();
         }, 1000);
       };
 
@@ -458,6 +474,7 @@
         showAutoClickTwo();
         showAutoClickThree();
         showAutoClickFour();
+        showAutoClickFive();
         var autoClick = setInterval(function() {
           points += 4;
           $("#number-of-clicks").text("You have " + points + " points");
@@ -465,6 +482,7 @@
           showAutoClickTwo();
           showAutoClickThree();
           showAutoClickFour();
+          showAutoClickFive();
         }, 1000);
       };
 
@@ -475,6 +493,7 @@
         showAutoClickTwo();
         showAutoClickThree();
         showAutoClickFour();
+        showAutoClickFive();
         var autoClick = setInterval(function() {
           points += 7;
           $("#number-of-clicks").text("You have " + points + " points");
@@ -482,6 +501,26 @@
           showAutoClickTwo();
           showAutoClickThree();
           showAutoClickFour();
+          showAutoClickFive();
+        }, 1000);
+      };
+
+      var increaseAutoClickFive = function() {
+        points -= 35000;
+        $("#number-of-clicks").text("You have " + points + " points");
+        showAutoClick();
+        showAutoClickTwo();
+        showAutoClickThree();
+        showAutoClickFour();
+        showAutoClickFive();
+        var autoClick = setInterval(function() {
+          points += 11;
+          $("#number-of-clicks").text("You have " + points + " points");
+          showAutoClick();
+          showAutoClickTwo();
+          showAutoClickThree();
+          showAutoClickFour();
+          showAutoClickFive();
         }, 1000);
       };
 
@@ -501,6 +540,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -519,6 +559,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -536,6 +577,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -550,6 +592,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -563,6 +606,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -575,6 +619,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -586,6 +631,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -595,6 +641,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -603,6 +650,7 @@
         showOwl();
         showHorse();
         showAutoClickFour();
+        showAutoClickFive();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -649,6 +697,15 @@
           showAutoClick();
       });
 
+      $("#auto-click-5").on("click", function() {
+          increaseAutoClickFive();
+          showAutoClickFive();
+          showAutoClickFour();
+          showAutoClickThree();
+          showAutoClickTwo();
+          showAutoClick();
+      });
+
       $("#plane").on("click", function() {
         planeClicked();
       });
@@ -685,7 +742,7 @@
         swanClicked();
       });
 
-      $("#add-120-points").on("click", function() {
+      $("#owl").on("click", function() {
         owlClicked();
       });
 
