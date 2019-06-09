@@ -94,8 +94,6 @@
   <body>
     <h1>Origami Clicker Game</h1>
 
-    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
-
     <!--This div contains the auto click images-->
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
@@ -103,7 +101,7 @@
       class="auto-clicks"
       id="auto-click">
 
-      <img src="http://www.giladorigami.com/P_Bat_Engel_Odyssey.JPG"
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsd4-ZzHUEkENRY2zgKP1-RxqSAPxm2PhGCy8nrZYNfL9CCQSH"
       class="auto-clicks"
       id="auto-click-2">
 
@@ -115,6 +113,8 @@
       class="auto-clicks"
       id="auto-click-4">
     </div>
+
+    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
 
     <button id="reset-points" type="button">Reset Game</button><br>
 
@@ -151,7 +151,7 @@
     class="pic"
     id="fiery-dragon">
 
-<img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
+    <img src="https://i0.wp.com/3dorigamiart.com/wp-content/uploads/album/72/big-swan-800x600.jpg"
     class="pic"
     id="3d-swan">
 
@@ -213,7 +213,7 @@
           <tr>
             <td class="type-of-origami">Fighter Jet</td>
             <td class="number-of-points">25</td>
-            <td class="required-to-unlock">4,000 points</td>
+            <td class="required-to-unlock">6,000 points</td>
           </tr>
           <tr>
             <td class="type-of-origami">T-Rex</td>
@@ -273,7 +273,7 @@
           <tr>
             <td class="type-of-origami">Crocodile</td>
             <td class="number-of-points">7 points per second</td>
-            <td class="cost">150,000 points</td>
+            <td class="cost">20,000 points</td>
           </tr>
         </tbody>
       </table>
@@ -369,6 +369,14 @@
         }
       };
 
+      var showAutoClickFour = function() {
+        if (points >= 20000) {
+          $("#auto-click-4").show();
+        } else {
+          $("#auto-click-4").hide();
+        }
+      };
+
       var show3DSwan = function() {
         if (points >= 30000) {
           $("#3d-swan").show();
@@ -390,14 +398,6 @@
           $("#horse").show();
         } else {
           $("#horse").hide();
-        }
-      };
-
-      var showAutoClickFour = function() {
-        if (points >= 150000) {
-          $("#auto-click-4").show();
-        } else {
-          $("#auto-click-4").hide();
         }
       };
 
