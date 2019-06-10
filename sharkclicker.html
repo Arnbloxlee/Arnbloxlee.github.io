@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shark Clicker</title>
+    <style>
+      h1 {
+        font-family: "impact", serif;
+      }
+
+      table {
+        color: rgb(0, 0, 255);
+        margin-left: 50px;
+      }
+
+      button {
+        background-color: rgb(255, 255, 0);
+      }
+
+      button:hover,button:focus {
+        background-color: rgba(255, 255, 255);
+      }
+
+      #reset-game {
+        border: 6px double rgb(0, 0, 255);
+        color: rgb(0, 0, 255);
+      }
+
+      .pic {
+        height: 70px;
+      }
+
+      .type-of-shark {
+        background-color: rgb(255, 0, 0);
+      }
+
+      .number-of-points {
+        background-color: rgb(255, 127, 0);
+      }
+
+      .when-unlocked {
+        background-color: rgb(255, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shark Clicker</h1>
+
+    <p>Click <a href="./Home.html">here</a> to go back to the home page.</p>
+
+    <button id="reset-game" type="button">Reset Game</button><br>
+
+    <!--These are the images that have to be clicked manually-->
+    <img src="http://www.saveoursharks.com.au/uploads/2/5/5/9/25598661/3040658.png?469" id="add-point" class="pic">
+    <img src="http://r.ddmcdn.com/s_f/DSC/uploads/2014/07/types-of-shark-thresher-shark-622x363.jpg" id="add-2-points" class="pic">
+    <img src="http://3w9yz8ifp462cet4q2j4fjen-wpengine.netdna-ssl.com/images/caribbean-reef-shark1.jpg" id="add-3-points" class="pic">
+
+    <!--This empty div contains the points-->
+    <div id="number-of-clicks">You have 0 points</div>
+
+    <!--These are the instructions on how to play-->
+    <p>
+      <strong>
+        Instructions: Click on the shark images to earn points. If you get enough points, you will unlock new origami that give more points.<br>
+        You can reset your points by pressing the <em>Reset Game</em> button.
+      </strong>
+    </p>
+
+    <!--This is the table that shows the origami that has to be clicked-->
+    <table>
+        <thead>
+            <tr>
+              <th class="type-of-shark">Type of Shark</th>
+              <th class="number-of-points">Number of Points</th>
+              <th class="when-unlocked">When Unlocked</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="type-of-shark">mako</td>
+              <td class="number-of-points">1</td>
+              <td class="when-unlocked">0 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">thresher</td>
+              <td class="number-of-points">2</td>
+              <td class="when-unlocked">50 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">caribbean reef shark</td>
+              <td class="number-of-points">3</td>
+              <td class="when-unlocked">500 points</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--This is the JavaScript for the game-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      var points = 0
+
+      var click = function() {
+        $("#number-of-clicks").text("You have " + points + " points")
+        points += 1
+      }
+
+      var twoClicks = function() {
+        $("#number-of-clicks").text("You have " + points + " points")
+        points += 2
+      }
+
+      var threeClicks = function() {
+        $("#number-of-clicks").text("You have " + points + " points")
+        points += 3
+      }
+
+      $("#add-point").on("click", function() {
+        showTwoPoints()
+        showThreePoints()
+        click()
+      })
+
+      $("#add-2-points").on("click", function() {
+        showThreePoints()
+        twoClicks()
+      })
+
+      $("#add-3-points").on("click", function() {
+        threeClicks()
+      })
+
+      $("#reset-game").on("click", function() {
+        window.location.assign(window.location.href)
+      })
+
+      var showTwoPoints = function() {
+        if (points >= 50) {
+          $("#add-2-points").show()
+        } else {
+          $("#add-2-points").hide()
+        }
+      }
+
+      var showThreePoints = function() {
+        if (points >= 500) {
+          $("#add-3-points").show()
+        } else {
+          $("#add-3-points").hide()
+        }
+      }
+
+      showTwoPoints()
+      showThreePoints()
+    </script>
+  </body>
+</html>
