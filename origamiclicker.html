@@ -21,10 +21,6 @@
         color: rgb(255, 127, 0);
       }
 
-      h2 {
-        color: rgb(0, 255, 0);
-      }
-
       table {
         color: rgb(0, 0, 255);
         margin: auto;
@@ -101,6 +97,15 @@
     <!--This div contains the auto click images-->
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
+
+      <p id="dogs-bought">You bought 0 dogs</p>
+      <p id="bats-bought">You bought 0 bats</p>
+      <p id="frogs-bought">You bought 0 frogs</p>
+      <p id="crocodiles-bought">You bought 0 crocodiles</p>
+      <p id="snakes-bought">You bought 0 snakes</p>
+      <!--This is the line that separates the the auto click images from the number of auto clicks bought-->
+      <p>_________________</p>
+
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAW2O1zAn0Fmlnayqky5BmwnlxHSitBxpCKuhnYm7wMqhtAOc"
       class="auto-clicks"
       id="auto-click">
@@ -126,7 +131,7 @@
 
     <button id="reset-points" type="button">Reset Game</button><br>
 
-    <!--This are the images that have to be clicked manually-->
+    <!--These are the images that have to be clicked manually-->
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95MhIKAbXH6CVXnxo8w6-Bknk3r0YvVcP-rCyb_F1RgjMASbO"
     class="pic"
     id="plane">
@@ -438,9 +443,12 @@
       showOwl();
       showHorse();
 
+      var dogsBought = 0
       var increaseAutoClick = function() {
         points -= 100;
         $("#number-of-clicks").text("You have " + points + " points");
+        dogsBought += 1;
+        $("#dogs-bought").text("You bought " + dogsBought + " dogs");
         showAutoClick();
         showAutoClickTwo();
         showAutoClickThree();
@@ -457,9 +465,12 @@
         }, 1000);
       };
 
+      var batsBought = 0;
       var increaseAutoClickTwo = function() {
         points -= 1000;
         $("#number-of-clicks").text("You have " + points + " points");
+        batsBought += 1;
+        $("#bats-bought").text("You bought " + batsBought + " bats");
         showAutoClick();
         showAutoClickTwo();
         showAutoClickThree();
@@ -476,9 +487,12 @@
         }, 1000);
       };
 
+      var frogsBought = 0;
       var increaseAutoClickThree = function() {
         points -= 6500;
         $("#number-of-clicks").text("You have " + points + " points");
+        frogsBought += 1;
+        $("#frogs-bought").text("You bought " + frogsBought + " frogs");
         showAutoClick();
         showAutoClickTwo();
         showAutoClickThree();
@@ -495,9 +509,12 @@
         }, 1000);
       };
 
+      var crocodilesBought = 0;
       var increaseAutoClickFour = function() {
         points -= 20000;
         $("#number-of-clicks").text("You have " + points + " points");
+        crocodilesBought +=  1;
+        $("#crocodiles-bought").text("You have " + crocodilesBought + " crocodiles")
         showAutoClick();
         showAutoClickTwo();
         showAutoClickThree();
@@ -514,9 +531,12 @@
         }, 1000);
       };
 
+      var snakesBought = 0;
       var increaseAutoClickFive = function() {
         points -= 35000;
         $("#number-of-clicks").text("You have " + points + " points");
+        snakesBought += 1;
+        $("#snakes-bought").text("You bought " + snakesBought + " snakes");
         showAutoClick();
         showAutoClickTwo();
         showAutoClickThree();
