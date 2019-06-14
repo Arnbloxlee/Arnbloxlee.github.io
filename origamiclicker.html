@@ -98,6 +98,15 @@
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
 
+      <p id="dogs-bought">You bought 0 dogs</p>
+      <p id="bats-bought">You bought 0 bats</p>
+      <p id="frogs-bought">You bought 0 frogs</p>
+      <p id="crocodiles-bought">You bought 0 crocodiles</p>
+      <p id="snakes-bought">You bought 0 snakes</p>
+
+      <!--This is the line that separates the the auto click images from the number of auto clicks bought-->
+      <p>-------------------------</p>
+
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAW2O1zAn0Fmlnayqky5BmwnlxHSitBxpCKuhnYm7wMqhtAOc"
       class="auto-clicks"
       id="auto-click">
@@ -117,18 +126,9 @@
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfWZKQKnItDRqOyHl7EOpFdEve2Y29Kped2friXcxJDqEUJGrv5A"
       class="auto-clicks"
       id="auto-click-5">
-
-      <!--This is the line that separates the the auto click images from the number of auto clicks bought-->
-      <p>_________________</p>
-
-      <p id="dogs-bought">You bought 0 dogs</p>
-      <p id="bats-bought">You bought 0 bats</p>
-      <p id="frogs-bought">You bought 0 frogs</p>
-      <p id="crocodiles-bought">You bought 0 crocodiles</p>
-      <p id="snakes-bought">You bought 0 snakes</p>
     </div>
 
-    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page.</p>
+    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
 
     <button id="reset-points" type="button">Reset Game</button><br>
 
@@ -300,15 +300,14 @@
     <!--This is the JavaScript for the game-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-
-
-    var points = 0;
-    $("#number-of-clicks").text("You have " + points + " points");
+      var points = 0;
+      $("#number-of-clicks").text("You have " + points + " points");
 
 
       //These functions decide if the origami images(including auto clicks) are going to be shown or not
       var showBoat = function() {
         if (points >= 50) {
+          $("#plane").hide();
           $("#boat").show();
         } else {
           $("#boat").hide();
@@ -325,6 +324,7 @@
 
       var showBird = function() {
         if (points >= 500) {
+          $("#boat").hide();
           $("#bird").show();
         } else {
           $("#bird").hide();
@@ -341,6 +341,7 @@
 
       var showWolf = function() {
         if (points >= 1650) {
+          $("#bird").hide();
           $("#wolf").show();
         } else {
           $("#wolf").hide();
@@ -349,6 +350,7 @@
 
       var showDragon = function() {
         if (points >= 3000) {
+          $("#wolf").hide();
           $("#dragon").show();
         } else {
           $("#dragon").hide();
@@ -357,6 +359,7 @@
 
       var showFighterJet = function() {
         if (points >= 6000) {
+          $("#dragon").hide();
           $("#fighter-jet").show();
         } else {
           $("#fighter-jet").hide();
@@ -373,6 +376,7 @@
 
       var showTRex = function() {
         if (points >= 11500) {
+          $("#fighter-jet").hide();
           $("#t-rex").show();
         } else {
           $("#t-rex").hide();
@@ -381,6 +385,7 @@
 
       var showFieryDragon = function() {
         if (points >= 18000) {
+          $("#t-rex").hide();
           $("#fiery-dragon").show();
         } else {
           $("#fiery-dragon").hide();
@@ -397,6 +402,7 @@
 
       var show3DSwan = function() {
         if (points >= 30000) {
+          $("#fiery-dragon").hide();
           $("#3d-swan").show();
         } else {
           $("#3d-swan").hide();
@@ -413,6 +419,7 @@
 
       var showOwl = function() {
         if (points >= 52000) {
+          $("#3d-swan").hide();
           $("#owl").show();
         } else {
           $("#owl").hide();
@@ -421,6 +428,7 @@
 
       var showHorse = function() {
         if (points >= 100000) {
+          $("#owl").hide();
           $("#horse").show();
         } else {
           $("#horse").hide();
