@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Word game </title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+          }
+
+          form {
+              font-size: 1.5em;
+          }
+
+          .scrambled,input,button {
+              font-family: monospace;
+              font-size: 2em;
+          }
+
+          #result {
+              height: 80px;
+              margin-top: 30px;
+              text-align: center;
+          }
+      </style>
+  </head>
+  <body>
+      <h1>Unscramble!</h1>
+
+      <p>Click <a href="./Home.html">here</a> to go back to the home page</p>
+      <form id="programming-form">
+          <label>
+              Unscramble these letters to form a word:<br>
+              <span class="scrambled"></span>
+              <br>
+              <input id="guess" type="text" size="10" autocomplete="off">
+          </label>
+          <button type="submit">Check</button>
+      </form>
+
+      <div id="result"></div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script>
+        var words = ["PROGRAMMING", "APPLE", "GUESS", "TODAY", "ELECTRIC", "TOMORROW", "GRASS", "LANGUAGE", "TREEHOUSE", "VIOLIN", "STRING", "NOTEBOOK", "CAT", "NOTE", "DOG", "BOOK", "CONDENSATION", "HAPPY", "HAPPINESS", "EMOTION", "ADVENTURE", "GOVERNMENT"];
+        var word = words[Math.floor(Math.random() * words.length)];
+        var finalWord = word.toUpperCase()
+        var wordShuffled = word.split('').sort(function () {
+          return 0.5 - Math.random();
+        }).join('');
+        var wordDisplay = wordShuffled.toUpperCase()
+        $(".scrambled").text(wordDisplay);
+
+        $("#programming-form").on("submit", function (event) {
+          event.preventDefault();
+
+          var $answer = $(this).find("#guess");
+          var answer = $answer.val().toUpperCase();
+
+        if (answer == finalWord) {
+          $("#result").text("Correct!").css("background-color", "rgb(0, 255, 68)")
+          console.log(answer);
+          console.log(finalWord);
+          setTimeout(function () {
+            window.location.assign(window.location.href);
+          }, 2000);
+        } else if (answer === "") {
+          $("#result").text("Please take a guess!").css("background-color", "rgb(255, 0, 0)")
+        } else {
+          $("#result").text("Try again").css("background-color", "rgb(255, 0, 0)")
+          console.log(answer);
+          console.log(finalWord);
+        }
+        });
+      </script>
+  </body>
+</html>
