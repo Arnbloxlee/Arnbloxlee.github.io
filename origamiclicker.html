@@ -3,19 +3,69 @@
   <head>
     <meta charset="utf-8">
     <title>Origami Clicker Game</title>
+    <link rel="icon" href="https://cdn.dribbble.com/users/264288/screenshots/4517686/origami-bird.jpg"
+      type="image/x-icon">
     <style>
-      body {
-        background-color: rgb(0, 255, 255);
+      body,
+      html {
+        background: linear-gradient(-45deg, rgb(247, 220, 111), rgb(244, 208, 63), rgb(142, 68, 173), rgb(74, 35, 90));
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
       }
+
+      @-webkit-keyframes Gradient {
+        0% {
+          background-position: 0% 50%
+        }
+
+        50% {
+          background-position: 100% 50%
+        }
+
+        100% {
+          background-position: 0% 50%
+        }
+      }
+
+      @-moz-keyframes Gradient {
+        0% {
+          background-position: 0% 50%
+        }
+
+        50% {
+          background-position: 100% 50%
+        }
+
+        100% {
+          background-position: 0% 50%
+        }
+      }
+
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%
+        }
+
+        50% {
+          background-position: 100% 50%
+        }
+
+        100% {
+          background-position: 0% 50%
+        }
+      }
+
 
       h1,
       h2 {
-        color: rgb(0, 255, 0);
+        color: white;
         font-family: "impact", serif;
       }
 
       p {
-        color: rgb(0, 0, 255);
+        color: white;
       }
 
       a {
@@ -72,7 +122,7 @@
       }
 
       #how-to-play {
-        color: rgb(255, 0, 0);
+        color: white;
       }
 
       .auto-clicks {
@@ -104,7 +154,7 @@
   <body>
     <h1>Origami Clicker Game</h1>
 
-    <h2>By <a href="https://github.com/Arnbloxlee"  target="_blank">Arnbloxlee</a></h2>
+    <h2>By <a href="https://github.com/Arnbloxlee" target="_blank">Arnbloxlee</a></h2>
 
     <!--This div contains the auto click images-->
     <div id="auto-clicks-container">
@@ -140,7 +190,7 @@
     </div>
 
     <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
-
+    
     <button id="reset-points" type="button">Reset Game</button><br>
 
     <!--These are the images that have to be clicked manually-->
