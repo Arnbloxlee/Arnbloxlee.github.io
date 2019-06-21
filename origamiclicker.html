@@ -6,7 +6,7 @@
     <link rel="icon" href="https://cdn.dribbble.com/users/264288/screenshots/4517686/origami-bird.jpg" type="image/x-icon">
     <style>
       body {
-        background-image: linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 127, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 0, 255));
+        background-image: linear-gradient(-45deg, rgb(0, 0, 0), rgb(255, 0, 0), rgb(255, 127, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 255, 255));
         background-size: 400% 400%;
         -webkit-animation: Gradient 15s ease infinite;
         -moz-animation: Gradient 15s ease infinite;
@@ -102,7 +102,7 @@
       }
 
       #auto-clicks-container {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(255, 255, 0);
         width: 10%;
         float: right;
       }
@@ -128,6 +128,10 @@
         width: 90%;
         position: relative;
         right: 4.5%;
+      }
+
+      .auto-click-text {
+        color: rgb(0, 0, 255);
       }
 
       .pic {
@@ -158,12 +162,12 @@
     <div id="auto-clicks-container">
       <h3 id="auto-click-heading">Auto Clicks</h3><br>
 
-      <p id="dogs-bought">You bought 0 dogs</p>
-      <p id="bats-bought">You bought 0 bats</p>
-      <p id="frogs-bought">You bought 0 frogs</p>
-      <p id="crocodiles-bought">You bought 0 crocodiles</p>
-      <p id="snakes-bought">You bought 0 snakes</p>
-      <p id="lizards-bought">You bought 0 lizards</p>
+      <p id="dogs-bought" class="auto-click-text">You bought 0 dogs</p>
+      <p id="bats-bought" class="auto-click-text">You bought 0 bats</p>
+      <p id="frogs-bought" class="auto-click-text">You bought 0 frogs</p>
+      <p id="crocodiles-bought" class="auto-click-text">You bought 0 crocodiles</p>
+      <p id="snakes-bought" class="auto-click-text">You bought 0 snakes</p>
+      <p id="lizards-bought" class="auto-click-text">You bought 0 lizards</p>
 
       <!--This is the line that separates the the auto click images from the number of auto clicks bought-->
       <p>-------------------------</p>
@@ -231,7 +235,7 @@
     <!--These are the instructions on how to play-->
     <p id="how-to-play">
       <strong>How To Play: Click on the origami images to earn points. If you get enough points, you will unlock <br>
-        new origami that give more points.There are also auto clicks that you can buy that show up in the red
+        new origami that give more points.There are also auto clicks that you can buy that show up in the yellow
         rectangle.<br>
         can reset your game by pressing the <em>Reset Game</em> button.</strong>
     </p>
