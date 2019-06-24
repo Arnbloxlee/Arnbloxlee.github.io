@@ -192,7 +192,7 @@
     </div>
 
     <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
-
+    
     <button id="reset-points" type="button">Reset Game</button><br>
 
     <!--These are the images that have to be clicked manually-->
@@ -227,7 +227,11 @@
     <img src="https://singaporecraft.files.wordpress.com/2013/11/p1090144-crop.jpg" class="pic" id="owl"><br>
 
     <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/82/37/0a82370c02e935e02d44aa010ffd0867.jpg" class="pic"
-      id="horse">
+      id="horse"><br>
+
+    <img
+      src="http://www.fosterfinancialservices.info/wp-content/uploads/origami-parrot-instructions-ac2b8c281ac2b8c2b2ac2b8ac2b8c29eac2b8c2b1ac2b8c29aac2b8c281ac2b8ac2b8ac2b8c294ac2b8c2b2ac2b8ac2b9c281ac2b8c29aac2b8c29aa.jpg"
+      class="pic" id="3d-parrot">
 
     <!--This div contains the points-->
     <div id="number-of-clicks"></div>
@@ -345,11 +349,11 @@
             <td class="type-of-origami">Snake</td>
             <td class="number-of-points">690 points per second</td>
             <td class="cost">35,000 points</td>
+          </tr>
           <tr>
             <td class="type-of-origami">Lizard</td>
             <td class="number-of-points">1,500 points per second</td>
             <td class="cost">72,000 points</td>
-          </tr>
           </tr>
         </tbody>
       </table>
@@ -501,6 +505,15 @@
         }
       };
 
+      var show3DParrot = function () {
+        if (points >= 210000) {
+          $("#horse").hide();
+          $("#3d-parrot").show();
+        } else {
+          $("#3d-parrot").hide();
+        }
+      };
+
       showBoat();
       showAutoClick();
       showBird();
@@ -517,6 +530,7 @@
       showOwl();
       showAutoClickSix();
       showHorse();
+      show3DParrot();
 
       var dogsBought = 0
       var increaseAutoClick = function () {
@@ -686,6 +700,7 @@
         showAutoClickSix();
         showHorse();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -706,6 +721,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -724,6 +740,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -740,6 +757,8 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -755,6 +774,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -769,6 +789,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -781,6 +802,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -792,6 +814,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -801,6 +824,7 @@
         showOwl();
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -808,11 +832,19 @@
         points += 275;
         showAutoClickSix();
         showHorse();
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
       var horseClicked = function () {
         points += 475;
+        show3DParrot();
+        $("#number-of-clicks").text("You have " + points + " points");
+      };
+
+      var parrotClicked = function () {
+        points += 625;
+        show3DParrot();
         $("#number-of-clicks").text("You have " + points + " points");
       };
 
@@ -907,6 +939,10 @@
 
       $("#horse").on("click", function () {
         horseClicked();
+      });
+
+      $("#3d-parrot").on("click", function () {
+        parrotClicked();
       });
     </script>
   </body>
