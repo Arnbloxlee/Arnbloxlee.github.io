@@ -1,4 +1,4 @@
-var points = 0;
+var points = 18000;
 $("#number-of-clicks").text("You have " + points + " points");
 
 
