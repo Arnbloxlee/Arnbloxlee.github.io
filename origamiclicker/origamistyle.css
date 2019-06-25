@@ -7,56 +7,50 @@ body {
 }
 
 @-webkit-keyframes Gradient {
-0% {
-  background-position: 0% 50%;
-}
-
-50% {
-  background-position: 100% 50%;
-}
-
-100% {
-  background-position: 0% 50%;
-}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @-moz-keyframes Gradient {
-0% {
-  background-position: 0% 50%;
-}
-
-50% {
-  background-position: 100% 50%;
-}
-
-100% {
-  background-position: 0% 50%;
-}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes Gradient {
-0% {
-  background-position: 0% 50%;
-}
-
-50% {
-  background-position: 100% 50%;
-}
-
-100% {
-  background-position: 0% 50%;
-}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
 h1,
 h2 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "impact", serif;
 }
 
 p {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 a {
@@ -97,6 +91,8 @@ a:active {
 #auto-clicks-container {
   background-color: rgb(255, 255, 0);
   width: 10%;
+  height: 400px;
+  overflow-y: auto;
   float: right;
 }
 
@@ -113,7 +109,7 @@ a:active {
 }
 
 #how-to-play {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .auto-clicks {

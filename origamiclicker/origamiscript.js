@@ -1,7 +1,6 @@
 var points = 0;
 $("#number-of-clicks").text("You have " + points + " points");
 
-
 //These functions decide if the origami images(including auto clicks) are going to be shown or not
 var showBoat = function () {
   if (points >= 50) {
@@ -106,7 +105,6 @@ var show3DSwan = function () {
     $("#3d-swan").hide();
   }
 };
-
 var showAutoClickFive = function () {
   if (points >= 35000) {
     $("#auto-click-5").show();
@@ -141,6 +139,14 @@ var showHorse = function () {
   }
 };
 
+var showAutoClickSeven = function () {
+  if (points >= 200000) {
+    $("#auto-click-7").show();
+  } else {
+    $("#auto-click-7").hide();
+  }
+};
+
 var show3DParrot = function () {
   if (points >= 210000) {
     $("#horse").hide();
@@ -166,6 +172,7 @@ showAutoClickFive();
 showOwl();
 showAutoClickSix();
 showHorse();
+showAutoClickSeven();
 show3DParrot();
 
 var dogsBought = 0
@@ -180,6 +187,7 @@ var increaseAutoClick = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 1;
@@ -190,6 +198,7 @@ var increaseAutoClick = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -205,6 +214,7 @@ var increaseAutoClickTwo = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 12;
@@ -214,6 +224,7 @@ var increaseAutoClickTwo = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -229,6 +240,7 @@ var increaseAutoClickThree = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 85;
@@ -239,6 +251,7 @@ var increaseAutoClickThree = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -254,6 +267,7 @@ var increaseAutoClickFour = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 345;
@@ -264,6 +278,7 @@ var increaseAutoClickFour = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -279,6 +294,7 @@ var increaseAutoClickFive = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 690;
@@ -289,6 +305,7 @@ var increaseAutoClickFive = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -304,6 +321,7 @@ var increaseAutoClickSix = function () {
   showAutoClickFour();
   showAutoClickFive();
   showAutoClickSix();
+  showAutoClickSeven();
 
   setInterval(function () {
     points += 1500;
@@ -314,6 +332,34 @@ var increaseAutoClickSix = function () {
     showAutoClickFour();
     showAutoClickFive();
     showAutoClickSix();
+    showAutoClickSeven();
+  }, 1000);
+};
+
+var sharksBought = 0;
+var increaseAutoClickSeven = function () {
+  points -= 200000;
+  $("#number-of-clicks").text("You have " + points + " points");
+  sharksBought += 1;
+  $("#sharks-bought").text("You bought " + sharksBought + " sharks");
+  showAutoClick();
+  showAutoClickTwo();
+  showAutoClickThree();
+  showAutoClickFour();
+  showAutoClickFive();
+  showAutoClickSix();
+  showAutoClickSeven();
+
+  setInterval(function () {
+    points += 4500;
+    $("#number-of-clicks").text("You have " + points + " points");
+    showAutoClick();
+    showAutoClickTwo();
+    showAutoClickThree();
+    showAutoClickFour();
+    showAutoClickFive();
+    showAutoClickSix();
+    showAutoClickSeven();
   }, 1000);
 };
 
@@ -357,6 +403,7 @@ var boatClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -376,6 +423,7 @@ var birdClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -393,7 +441,7 @@ var wolfClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
-  show3DParrot();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -410,6 +458,7 @@ var dragonClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -425,6 +474,7 @@ var fighterJetClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -438,6 +488,7 @@ var tRexClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -450,6 +501,7 @@ var fieryDragonClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -460,6 +512,7 @@ var swanClicked = function () {
   showOwl();
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
@@ -468,19 +521,20 @@ var owlClicked = function () {
   points += 275;
   showAutoClickSix();
   showHorse();
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
 var horseClicked = function () {
   points += 475;
+  showAutoClickSeven();
   show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
 var parrotClicked = function () {
   points += 625;
-  show3DParrot();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -525,6 +579,17 @@ $("#auto-click-5").on("click", function () {
 
 $("#auto-click-6").on("click", function () {
   increaseAutoClickSix();
+  showAutoClickSix();
+  showAutoClickFive();
+  showAutoClickFour();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-7").on("click", function () {
+  increaseAutoClickSeven();
+  showAutoClickSeven();
   showAutoClickSix();
   showAutoClickFive();
   showAutoClickFour();
