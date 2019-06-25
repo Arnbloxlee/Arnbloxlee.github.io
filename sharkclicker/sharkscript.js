@@ -1,4 +1,33 @@
 var points = 0
+$("#number-of-clicks").text("You have " + points + " points")
+
+var showTwoPoints = function () {
+  if (points >= 50) {
+    $("#add-2-points").show()
+  } else {
+    $("#add-2-points").hide()
+  }
+}
+
+var showThreePoints = function () {
+  if (points >= 500) {
+    $("#add-3-points").show()
+  } else {
+    $("#add-3-points").hide()
+  }
+}
+
+var showFourPoints = function () {
+  if (points >= 1300) {
+    $("#add-4-points").show()
+  } else {
+    $("#add-4-points").hide()
+  }
+}
+
+showTwoPoints()
+showThreePoints()
+showFourPoints()
 
 var click = function() {
  $("#number-of-clicks").text("You have " + points + " points")
@@ -44,31 +73,3 @@ fourClicks()
 $("#reset-game").on("click", function() {
  window.location.assign(window.location.href)
 })
-
-var showTwoPoints = function() {
- if (points >= 50) {
-   $("#add-2-points").show()
- } else {
-   $("#add-2-points").hide()
- }
-}
-
-var showThreePoints = function() {
- if (points >= 500) {
-   $("#add-3-points").show()
- } else {
-   $("#add-3-points").hide()
- }
-}
-
-var showFourPoints = function() {
- if (points >= 1300) {
-   $("#add-4-points").show()
- } else {
-   $("#add-4-points").hide()
- }
-}
-
-showTwoPoints()
-showThreePoints()
-showFourPoints()
