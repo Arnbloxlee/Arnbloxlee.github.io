@@ -1,4 +1,4 @@
-var points = 200000;
+var points = 0;
 $("#number-of-clicks").text("You have " + points + " points");
 
 //These functions decide if the origami images(including auto clicks) are going to be shown or not
