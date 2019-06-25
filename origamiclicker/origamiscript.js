@@ -150,9 +150,9 @@ var showAutoClickSeven = function () {
 var show3DParrot = function () {
   if (points >= 210000) {
     $("#horse").hide();
-    $("#3d-parrot").show();
+    $("#parrot").show();
   } else {
-    $("#3d-parrot").hide();
+    $("#parrot").hide();
   }
 };
 
@@ -642,6 +642,6 @@ $("#horse").on("click", function () {
   horseClicked();
 });
 
-$("#3d-parrot").on("click", function () {
+$("#parrot").on("click", function () {
   parrotClicked();
 });
