@@ -10,9 +10,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -22,9 +24,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -34,9 +38,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -44,59 +50,60 @@ body {
 
 
 h1 {
- font-family: "impact", serif;
+  font-family: "impact", serif;
 }
 
 table {
- color: rgb(0, 0, 255);
- margin-left: 50px;
+  color: rgb(0, 0, 255);
+  margin-left: 50px;
 }
 
 button {
- background-color: rgb(255, 255, 0);
+  background-color: rgb(255, 255, 0);
 }
 
-button:hover,button:focus {
- background-color: rgba(255, 255, 255);
+button:hover,
+button:focus {
+  background-color: rgba(255, 255, 255);
 }
 
 #reset-game {
- border: 6px double rgb(0, 0, 255);
- color: rgb(0, 0, 255);
+  border: 6px double rgb(0, 0, 255);
+  color: rgb(0, 0, 255);
 }
 
 .pic {
- height: 70px;
+  height: 70px;
 }
 
 .type-of-shark {
- background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
 }
 
 .number-of-points {
- background-color: rgb(255, 127, 0);
+  background-color: rgb(255, 127, 0);
 }
 
 .when-unlocked {
- background-color: rgb(255, 255, 0);
+  background-color: rgb(255, 255, 0);
 }
 
 .auto-clicks {
- float: right;
- width: 90%;
- position: relative;
- right: 4.5%;
+  float: right;
+  width: 90%;
+  position: relative;
+  right: 4.5%;
 }
 
 #auto-click-container {
-background-color: rgb(81, 255, 246);
-width: 10%;
-float: right;
+  background-color: rgb(81, 255, 246);
+  width: 10%;
+  float: right;
 }
 
 #auto-click-heading {
-color: rgb(0, 0, 255);
-position: absolute;
-top: 30px;
-right: 30px;
+  color: rgb(0, 0, 255);
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
