@@ -52,10 +52,13 @@
         </div>
       </div>
       <div class="col-sm-6">
+
         <h1>Origami Clicker Game</h1>
+
         <h2>By <a href="https://github.com/Arnbloxlee" target="_blank">Arnbloxlee</a></h2>
 
-        <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
+        <p>Click <a href="/Programming/JavaScript/Games/Home.html">here</a> to go back to the home page</p>
+        <p>Play the game on Gitub <a href="https://arnbloxlee.github.io/origamiclicker/origamiclicker.html">here</a></p>
 
         <button id="reset-points" type="button">Reset Game</button><br>
 
@@ -100,6 +103,9 @@
         <img src="https://www.giladorigami.com/origami-thumbnails/P_Marnat_Terry_Parrot.jpg" class="pic" id="parrot"
           class="img-responsive">
 
+        <img src="https://s-media-cache-ak0.pinimg.com/originals/9d/8a/4c/9d8a4c47f289bc4b243b11a762621135.jpg"
+          class="pic" id="tiger" class="img-responsive">
+
         <!--This div contains the points-->
         <div id="number-of-clicks"></div>
 
@@ -108,12 +114,13 @@
           <strong>How To Play: Click on the origami images to earn points. If <br>
             you get enough points, you will unlock <br>
             new origami that give more points.There are also auto<br>
-            clicks that you can buy that show up in the yellow rectangle.<br>
-            can reset your game by pressing the <em>Reset Game</em> button.</strong>
+            clicks that you can buy that show up in the yellow rectangle.(You might need to<br>
+            scroll down a bit to see the image)You can reset your game by<br>
+            pressing the <em>Reset Game</em> button.</strong>
         </p>
 
         <!--This is the table that shows the origami that has to be clicked.-->
-        <div id="click-table">
+        <div id="click-table" class="table-responsive">
           <table>
             <thead>
               <tr>
@@ -189,7 +196,7 @@
           <h2>Auto Click Table</h2>
 
           <!--This is the auto click table-->
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th class="type-of-origami">Type of Origami</th>

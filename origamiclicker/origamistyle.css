@@ -6,6 +6,10 @@ body {
   animation: Gradient 15s ease infinite;
 }
 
+tr,td,th {
+  border: solid 2px rgb(0, 162, 255);
+}
+
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;
