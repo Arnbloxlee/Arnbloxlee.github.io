@@ -51,9 +51,12 @@ showThreePoints()
 showFourPoints()
 showFivePoints()
 
+var whaleSharksBought = 0;
 var increaseAutoClick = function () {
   points -= 125
-  $("#number-of-clicks").text("You have " + points + " points")
+  $("#number-of-clicks").text("You have " + points + " points");
+  whaleSharksBought += 1;
+  $("#whale-sharks-bought").text("You bought " + whaleSharksBought + " Whale Sharks");
   showAutoClick()
 
   setInterval(function () {

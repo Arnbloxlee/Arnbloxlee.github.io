@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon"
       href="https://4.bp.blogspot.com/-qgFYsgImQUM/V27ZMD0T6DI/AAAAAAAABBE/DWWXGWWhVBUylcoG-Qnf-iBAkr5OiR3twCLcB/s1600/lemon%2Bshark%2Bin%2Bocean.jpg"
       type="image/x-icon">
@@ -10,77 +12,89 @@
   </head>
 
   <body>
-    <h1>Shark Clicker</h1>
+    <div class="container-fluid">
+      <div class="col-sm-12">
+        <div id="auto-click-container">
+          <h3 id="auto-click-heading"> auto clicks</h3><br>
+          <p id="whale-sharks-bought">You bought 0 Whale Sharks</p>
 
-    <h2>By <a href="https://github.com/ablixlee" target="_blank">Ablixlee</a></h2>
-
-    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page.</p>
-
-    <button id="reset-game" type="button">Reset Game</button><br>
-
-    <div id="auto-click-container">
-      <h3 id="auto-click-heading"> auto clicks</h3><br>
-
-      <img src="https://shark-facts.com/wp-content/uploads/2015/11/whale-shark-ft.jpg" id="auto-click"
-        class="auto-clicks">
+          <p>-----------------</p>
+        
+          <img src="https://shark-facts.com/wp-content/uploads/2015/11/whale-shark-ft.jpg" id="auto-click" class="auto-clicks">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h1>Shark Clicker</h1>
+        
+        <h2>By <a href="https://github.com/ablixlee" target="_blank">Ablixlee</a></h2>
+        
+        <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page.</p>
+        
+        <button id="reset-game" type="button">Reset Game</button><br>
+        
+        <!--These are the images that have to be clicked manually-->
+        <img src="http://www.saveoursharks.com.au/uploads/2/5/5/9/25598661/3040658.png?469" id="add-point" class="pic">
+        <img src="https://r.ddmcdn.com/s_f/DSC/uploads/2014/07/types-of-shark-thresher-shark-622x363.jpg" id="add-2-points"
+          class="pic">
+        <img src="http://3w9yz8ifp462cet4q2j4fjen-wpengine.netdna-ssl.com/images/caribbean-reef-shark1.jpg" id="add-3-points"
+          class="pic">
+        <img
+          src="https://4.bp.blogspot.com/-qgFYsgImQUM/V27ZMD0T6DI/AAAAAAAABBE/DWWXGWWhVBUylcoG-Qnf-iBAkr5OiR3twCLcB/s1600/lemon%2Bshark%2Bin%2Bocean.jpg"
+          id="add-4-points" class="pic">
+        <img src="https://www.crystaldive.com/wp-content/uploads/2017/11/crystaldive.com-blacktip-sharks-koh-tao-thailand.jpg"
+          id="add-5-points" class="pic">
+        
+        <!--This empty div contains the points-->
+        <div id="number-of-clicks">You have 0 points</div>
+        
+        <!--These are the instructions on how to play-->
+        <p>
+          <strong>
+            Instructions: Click on the shark images to earn points. If you get enough points, you will unlock new shark that
+            give more points.<br>
+            You can reset your points by pressing the <em>Reset Points</em> button.
+          </strong>
+        </p>
+        
+        <!--This is the table that shows the origami that has to be clicked-->
+        <table>
+          <thead>
+            <tr>
+              <th class="type-of-shark">Type of Shark</th>
+              <th class="number-of-points">Number of Points</th>
+              <th class="when-unlocked">When Unlocked</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="type-of-shark">mako</td>
+              <td class="number-of-points">1</td>
+              <td class="when-unlocked">0 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">thresher</td>
+              <td class="number-of-points">2</td>
+              <td class="when-unlocked">50 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">caribbean reef shark</td>
+              <td class="number-of-points">3</td>
+              <td class="when-unlocked">500 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">lemon shark</td>
+              <td class="number-of-points">4</td>
+              <td class="when-unlocked">1300 points</td>
+            </tr>
+            <tr>
+              <td class="type-of-shark">Blacktip shark</td>
+              <td class="number-of-points">5</td>
+              <td class="when-unlocked">1725 points</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-    <!--These are the images that have to be clicked manually-->
-    <img src="http://www.saveoursharks.com.au/uploads/2/5/5/9/25598661/3040658.png?469" id="add-point" class="pic">
-    <img src="https://r.ddmcdn.com/s_f/DSC/uploads/2014/07/types-of-shark-thresher-shark-622x363.jpg" id="add-2-points" class="pic">
-    <img src="http://3w9yz8ifp462cet4q2j4fjen-wpengine.netdna-ssl.com/images/caribbean-reef-shark1.jpg" id="add-3-points" class="pic">
-    <img src="https://4.bp.blogspot.com/-qgFYsgImQUM/V27ZMD0T6DI/AAAAAAAABBE/DWWXGWWhVBUylcoG-Qnf-iBAkr5OiR3twCLcB/s1600/lemon%2Bshark%2Bin%2Bocean.jpg" id="add-4-points" class="pic">
-    <img src="https://www.crystaldive.com/wp-content/uploads/2017/11/crystaldive.com-blacktip-sharks-koh-tao-thailand.jpg" id="add-5-points" class="pic">
-
-    <!--This empty div contains the points-->
-    <div id="number-of-clicks">You have 0 points</div>
-
-    <!--These are the instructions on how to play-->
-    <p>
-      <strong>
-        Instructions: Click on the shark images to earn points. If you get enough points, you will unlock new shark that
-        give more points.<br>
-        You can reset your points by pressing the <em>Reset Points</em> button.
-      </strong>
-    </p>
-
-    <!--This is the table that shows the origami that has to be clicked-->
-    <table>
-      <thead>
-        <tr>
-          <th class="type-of-shark">Type of Shark</th>
-          <th class="number-of-points">Number of Points</th>
-          <th class="when-unlocked">When Unlocked</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="type-of-shark">mako</td>
-          <td class="number-of-points">1</td>
-          <td class="when-unlocked">0 points</td>
-        </tr>
-        <tr>
-          <td class="type-of-shark">thresher</td>
-          <td class="number-of-points">2</td>
-          <td class="when-unlocked">50 points</td>
-        </tr>
-        <tr>
-          <td class="type-of-shark">caribbean reef shark</td>
-          <td class="number-of-points">3</td>
-          <td class="when-unlocked">500 points</td>
-        </tr>
-        <tr>
-          <td class="type-of-shark">lemon shark</td>
-          <td class="number-of-points">4</td>
-          <td class="when-unlocked">1300 points</td>
-        </tr>
-        <tr>
-          <td class="type-of-shark">Blacktip shark</td>
-          <td class="number-of-points">5</td>
-          <td class="when-unlocked">1725 points</td>
-        </tr>
-      </tbody>
-    </table>
 
     <!--This is the JavaScript for the game-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
