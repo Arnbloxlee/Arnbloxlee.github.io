@@ -61,6 +61,10 @@ a {
   color: rgb(255, 127, 0);
 }
 
+b {
+  color: rgb(255, 0, 0);
+}
+
 table {
   color: rgb(0, 0, 255);
   margin: auto;
@@ -141,4 +145,8 @@ a:active {
 .required-to-unlock,
 .cost {
   background-color: rgb(255, 255, 0);
+}
+
+.can-buy-autoclick {
+  color: rgb(0, 0, 0);
 }

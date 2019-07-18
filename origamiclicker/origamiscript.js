@@ -14,8 +14,10 @@ var showBoat = function () {
 var showAutoClick = function () {
   if (points >= 100) {
     $("#auto-click").show();
+    $("#can-buy-dog").show();
   } else {
     $("#auto-click").hide();
+    $("#can-buy-dog").hide();
   }
 };
 
@@ -31,8 +33,10 @@ var showBird = function () {
 var showAutoClickTwo = function () {
   if (points >= 1000) {
     $("#auto-click-2").show();
+    $("#can-buy-bat").show();
   } else {
     $("#auto-click-2").hide();
+    $("#can-buy-bat").hide();
   }
 };
 
@@ -66,8 +70,10 @@ var showFighterJet = function () {
 var showAutoClickThree = function () {
   if (points >= 6500) {
     $("#auto-click-3").show();
+    $("#can-buy-frog").show();
   } else {
     $("#auto-click-3").hide();
+    $("#can-buy-frog").hide();
   }
 };
 
@@ -92,8 +98,10 @@ var showFieryDragon = function () {
 var showAutoClickFour = function () {
   if (points >= 20000) {
     $("#auto-click-4").show();
+    $("#can-buy-crocodile").show();
   } else {
     $("#auto-click-4").hide();
+    $("#can-buy-crocodile").hide();
   }
 };
 
@@ -108,8 +116,10 @@ var show3DSwan = function () {
 var showAutoClickFive = function () {
   if (points >= 35000) {
     $("#auto-click-5").show();
+    $("#can-buy-snake").show();
   } else {
     $("#auto-click-5").hide();
+    $("#can-buy-snake").hide();
   }
 };
 
@@ -125,8 +135,10 @@ var showOwl = function () {
 var showAutoClickSix = function () {
   if (points >= 72000) {
     $("#auto-click-6").show();
+    $("#can-buy-lizard").show();
   } else {
     $("#auto-click-6").hide();
+    $("#can-buy-lizard").hide();
   }
 };
 
@@ -142,8 +154,10 @@ var showHorse = function () {
 var showAutoClickSeven = function () {
   if (points >= 200000) {
     $("#auto-click-7").show();
+    $("#can-buy-shark").show();
   } else {
     $("#auto-click-7").hide();
+    $("#can-buy-shark").hide();
   }
 };
 
