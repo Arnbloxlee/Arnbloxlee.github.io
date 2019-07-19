@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Word game </title>
+    <link rel="stylesheet" href="unscramblestyle.css">
+  </head>
+
+  <body>
+    <h1>Unscramble!</h1>
+    <p>Click <a href="https://arnbloxlee.github.io">here</a> to go back to the home page</p>
+    <form id="programming-form">
+      <label>
+        Unscramble these letters to form a word:<br>
+        <span class="scrambled"></span>
+        <br>
+        <input id="guess" type="text" size="10" autocomplete="off">
+      </label>
+      <button type="submit">Check</button>
+    </form>
+
+    <button id="show-word">Show Word</button>
+
+    <div id="result"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="unscramblescript.js"></script>
+  </body>
+</html>
