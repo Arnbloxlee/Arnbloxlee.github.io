@@ -111,7 +111,7 @@ a:active {
   padding: 10px 10px 10px 10px;
 }
 
-#number-of-clicks {
+.points {
   color: rgb(255, 0, 255);
 }
 
@@ -131,7 +131,7 @@ a:active {
 }
 
 .pic {
-  width: 105px;
+  height: 105px;
 }
 
 .type-of-origami {
