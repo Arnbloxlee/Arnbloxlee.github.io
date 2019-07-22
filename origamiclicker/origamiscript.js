@@ -184,6 +184,15 @@ var showTiger = function () {
   }
 };
 
+var showBull = function () {
+  if (points >= 500000) {
+    $("#tiger").hide();
+    $("#bull").show();
+  } else {
+    $("#bull").hide();
+  }
+};
+
 showBoat();
 showAutoClick();
 showBird();
@@ -203,6 +212,7 @@ showHorse();
 showAutoClickSeven();
 show3DParrot();
 showTiger();
+showBull();
 
 var dogsBought = 0
 var increaseAutoClick = function () {
@@ -431,6 +441,7 @@ var planeClicked = function () {
   showHorse();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -456,6 +467,7 @@ var boatClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -479,6 +491,7 @@ var birdClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -500,6 +513,7 @@ var wolfClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -520,6 +534,7 @@ var dragonClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -539,6 +554,7 @@ var fighterJetClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -556,6 +572,7 @@ var tRexClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -572,6 +589,7 @@ var fieryDragonClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -586,6 +604,7 @@ var swanClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -598,6 +617,7 @@ var owlClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -608,6 +628,7 @@ var horseClicked = function () {
   showAutoClickSeven();
   show3DParrot();
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -616,6 +637,7 @@ var parrotClicked = function () {
   $("#click-points").text("Click points: " + clickPoints);
   points += 625;
   showTiger();
+  showBull();
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -623,6 +645,14 @@ var tigerClicked = function () {
   clickPoints += 840;
   $("#click-points").text("Click points: " + clickPoints);
   points += 840;
+  showBull();
+  $("#number-of-clicks").text("You have " + points + " points");
+};
+
+var bullClicked = function () {
+  clickPoints += 1100;
+  $("#click-points").text("Click points: " + clickPoints);
+  points += 1100;
   $("#number-of-clicks").text("You have " + points + " points");
 };
 
@@ -736,4 +766,8 @@ $("#parrot").on("click", function () {
 
 $("#tiger").on("click", function () {
   tigerClicked();
+});
+
+$("#bull").on("click", function () {
+  bullClicked();
 });
