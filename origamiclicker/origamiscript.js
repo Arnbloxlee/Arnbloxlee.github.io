@@ -5,7 +5,28 @@ $("#click-points").text("Click points: " + clickPoints);
 var autoClickPoints = 0;
 $("#autoclick-points").text("Auto click points: " + autoClickPoints);
 
+$("#show-stats").hide();
+var showStats = function () {
+  $("#show-stats").on("click", function () {
+    $("#show-stats").hide();
+    $("#autoclick-points").show();
+    $("#click-points").show();
+    $("#stats-heading").show();
+    $("#hide-stats").show();
+  });
+}
 
+var hideStats = function () {
+  $("#hide-stats").on("click", function () {
+    $("#hide-stats").hide();
+    $("#autoclick-points").hide();
+    $("#click-points").hide();
+    $("#stats-heading").hide();
+    $("#show-stats").show();
+  });
+}
+showStats();
+hideStats();
 //These functions decide if the origami images(including auto clicks) are going to be shown or not
 var showBoat = function () {
   if (points >= 50) {

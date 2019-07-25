@@ -111,12 +111,28 @@ a:active {
   padding: 10px 10px 10px 10px;
 }
 
-.points {
-  color: rgb(255, 0, 255);
-}
-
 #how-to-play {
   color: rgb(255, 255, 255);
+}
+
+#hide-stats {
+  color: rgb(255, 0, 0);
+  text-decoration: underline;
+  width: 70px;
+}
+
+#show-stats {
+  color: rgb(255, 0, 0);
+  text-decoration: underline;
+  width: 77px;
+}
+
+#show-stats:hover,#hide-stats:hover {
+  color: rgb(255, 255, 255);
+}
+
+.points {
+  color: rgb(255, 0, 255);
 }
 
 .auto-clicks {
