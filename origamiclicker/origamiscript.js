@@ -4,6 +4,8 @@ var clickPoints = 0;
 $("#click-points").text("Click points: " + clickPoints);
 var autoClickPoints = 0;
 $("#autoclick-points").text("Auto click points: " + autoClickPoints);
+var pointsSpent = 0;
+$("#points-spent").text("Points spent: " + pointsSpent);
 
 $("#show-stats").hide();
 var showStats = function () {
@@ -241,6 +243,8 @@ var increaseAutoClick = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   dogsBought += 1;
   $("#dogs-bought").text("You bought " + dogsBought + " dogs");
+  pointsSpent += 100;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -271,6 +275,8 @@ var increaseAutoClickTwo = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   batsBought += 1;
   $("#bats-bought").text("You bought " + batsBought + " bats");
+  pointsSpent += 1000;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -300,6 +306,8 @@ var increaseAutoClickThree = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   frogsBought += 1;
   $("#frogs-bought").text("You bought " + frogsBought + " frogs");
+  pointsSpent += 6500;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -328,7 +336,9 @@ var increaseAutoClickFour = function () {
   points -= 20000;
   $("#number-of-clicks").text("You have " + points + " points");
   crocodilesBought += 1;
-  $("#crocodiles-bought").text("You have " + crocodilesBought + " crocodiles")
+  $("#crocodiles-bought").text("You have " + crocodilesBought + " crocodiles");
+  pointsSpent += 20000;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -358,6 +368,8 @@ var increaseAutoClickFive = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   snakesBought += 1;
   $("#snakes-bought").text("You bought " + snakesBought + " snakes");
+  pointsSpent += 35000;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -387,6 +399,8 @@ var increaseAutoClickSix = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   lizardsBought += 1;
   $("#lizards-bought").text("You bought " + lizardsBought + " lizards");
+  pointsSpent += 72000;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
@@ -416,6 +430,8 @@ var increaseAutoClickSeven = function () {
   $("#number-of-clicks").text("You have " + points + " points");
   sharksBought += 1;
   $("#sharks-bought").text("You bought " + sharksBought + " sharks");
+  pointsSpent += 200000;
+  $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
   showAutoClickThree();
