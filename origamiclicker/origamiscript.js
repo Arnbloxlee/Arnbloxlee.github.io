@@ -29,6 +29,24 @@ var hideStats = function () {
     $("#show-stats").show();
   });
 }
+//Increases time
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+setInterval(function () {
+  seconds += 1;
+  $("#time-played").text("Time played: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+  if (seconds >= 60) {
+    seconds -= 60;
+    minutes += 1;
+    $("#time-played").text("Time played: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+    if (minutes >= 60) {
+      minutes -= 60;
+      hours += 1;
+      $("#time-played").text("Time played: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+    }
+  }
+}, 1000);
 showStats();
 hideStats();
 //These functions decide if the origami images(including auto clicks) are going to be shown or not
