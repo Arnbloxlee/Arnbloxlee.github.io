@@ -14,6 +14,7 @@ var showStats = function () {
     $("#autoclick-points").show();
     $("#click-points").show();
     $("#stats-heading").show();
+    $("#points-spent").show();
     $("#hide-stats").show();
   });
 }
@@ -24,6 +25,7 @@ var hideStats = function () {
     $("#autoclick-points").hide();
     $("#click-points").hide();
     $("#stats-heading").hide();
+    $("#points-spent").hide();
     $("#show-stats").show();
   });
 }
