@@ -97,7 +97,7 @@ a:active {
 
 #auto-clicks-container {
   background-color: rgb(255, 255, 0);
-  width: 10%;
+  width: 30%;
   height: 400px;
   overflow-y: auto;
   float: right;

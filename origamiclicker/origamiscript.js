@@ -15,9 +15,10 @@ var showStats = function () {
     $("#click-points").show();
     $("#stats-heading").show();
     $("#points-spent").show();
+    $("#time-played").show();
     $("#hide-stats").show();
   });
-}
+};
 
 var hideStats = function () {
   $("#hide-stats").on("click", function () {
@@ -26,9 +27,10 @@ var hideStats = function () {
     $("#click-points").hide();
     $("#stats-heading").hide();
     $("#points-spent").hide();
+    $("#time-played").hide();
     $("#show-stats").show();
   });
-}
+};
 //Increases time
 var seconds = 0;
 var minutes = 0;
@@ -59,8 +61,9 @@ var showBoat = function () {
   }
 };
 
+var dogCost = 100;
 var showAutoClick = function () {
-  if (points >= 100) {
+  if (points >= dogCost) {
     $("#auto-click").show();
     $("#can-buy-dog").show();
   } else {
@@ -78,8 +81,9 @@ var showBird = function () {
   }
 };
 
+var batCost = 1000;
 var showAutoClickTwo = function () {
-  if (points >= 1000) {
+  if (points >= batCost) {
     $("#auto-click-2").show();
     $("#can-buy-bat").show();
   } else {
@@ -115,8 +119,9 @@ var showFighterJet = function () {
   }
 };
 
+var frogCost = 6500;
 var showAutoClickThree = function () {
-  if (points >= 6500) {
+  if (points >= frogCost) {
     $("#auto-click-3").show();
     $("#can-buy-frog").show();
   } else {
@@ -143,8 +148,9 @@ var showFieryDragon = function () {
   }
 };
 
+var crocCost = 20000;
 var showAutoClickFour = function () {
-  if (points >= 20000) {
+  if (points >= crocCost) {
     $("#auto-click-4").show();
     $("#can-buy-crocodile").show();
   } else {
@@ -161,8 +167,10 @@ var show3DSwan = function () {
     $("#3d-swan").hide();
   }
 };
+
+var snakeCost = 35000;
 var showAutoClickFive = function () {
-  if (points >= 35000) {
+  if (points >= snakeCost) {
     $("#auto-click-5").show();
     $("#can-buy-snake").show();
   } else {
@@ -180,8 +188,9 @@ var showOwl = function () {
   }
 };
 
+var lizardCost = 72000;
 var showAutoClickSix = function () {
-  if (points >= 72000) {
+  if (points >= lizardCost) {
     $("#auto-click-6").show();
     $("#can-buy-lizard").show();
   } else {
@@ -199,8 +208,9 @@ var showHorse = function () {
   }
 };
 
+var sharkCost = 200000;
 var showAutoClickSeven = function () {
-  if (points >= 200000) {
+  if (points >= sharkCost) {
     $("#auto-click-7").show();
     $("#can-buy-shark").show();
   } else {
@@ -257,13 +267,71 @@ show3DParrot();
 showTiger();
 showBull();
 
+$("#auto-click").on("click", function () {
+  increaseAutoClick();
+  showAutoClick();
+});
+
+$("#auto-click-2").on("click", function () {
+  increaseAutoClickTwo();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-3").on("click", function () {
+  increaseAutoClickThree();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-4").on("click", function () {
+  increaseAutoClickFour();
+  showAutoClickFour();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-5").on("click", function () {
+  increaseAutoClickFive();
+  showAutoClickFive();
+  showAutoClickFour();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-6").on("click", function () {
+  increaseAutoClickSix();
+  showAutoClickSix();
+  showAutoClickFive();
+  showAutoClickFour();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
+$("#auto-click-7").on("click", function () {
+  increaseAutoClickSeven();
+  showAutoClickSeven();
+  showAutoClickSix();
+  showAutoClickFive();
+  showAutoClickFour();
+  showAutoClickThree();
+  showAutoClickTwo();
+  showAutoClick();
+});
+
 var dogsBought = 0
 var increaseAutoClick = function () {
-  points -= 100;
+  points -= dogCost;
   $("#number-of-clicks").text("You have " + points + " points");
   dogsBought += 1;
-  $("#dogs-bought").text("You bought " + dogsBought + " dogs");
-  pointsSpent += 100;
+  $("#dogs-bought").text("You bought " + dogsBought + " dogs.");
+  pointsSpent += dogCost;
+  dogCost += 20;
+  $("#dog-cost").text("Dog cost: " + dogCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -291,11 +359,13 @@ var increaseAutoClick = function () {
 
 var batsBought = 0;
 var increaseAutoClickTwo = function () {
-  points -= 1000;
+  points -= batCost;
   $("#number-of-clicks").text("You have " + points + " points");
   batsBought += 1;
   $("#bats-bought").text("You bought " + batsBought + " bats");
-  pointsSpent += 1000;
+  pointsSpent += batCost;
+  batCost += 200;
+  $("#bat-cost").text("Bat cost: " + batCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -322,11 +392,13 @@ var increaseAutoClickTwo = function () {
 
 var frogsBought = 0;
 var increaseAutoClickThree = function () {
-  points -= 6500;
+  points -= frogCost;
   $("#number-of-clicks").text("You have " + points + " points");
   frogsBought += 1;
   $("#frogs-bought").text("You bought " + frogsBought + " frogs");
-  pointsSpent += 6500;
+  pointsSpent += frogCost;
+  frogCost += 1300;
+  $("#frog-cost").text("Frog cost: " + frogCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -353,11 +425,13 @@ var increaseAutoClickThree = function () {
 
 var crocodilesBought = 0;
 var increaseAutoClickFour = function () {
-  points -= 20000;
+  points -= crocCost;
   $("#number-of-clicks").text("You have " + points + " points");
   crocodilesBought += 1;
   $("#crocodiles-bought").text("You have " + crocodilesBought + " crocodiles");
-  pointsSpent += 20000;
+  pointsSpent += crocCost;
+  crocCost += 4000;
+  $("#croc-cost").text("Crocodile cost: " + crocCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -384,11 +458,13 @@ var increaseAutoClickFour = function () {
 
 var snakesBought = 0;
 var increaseAutoClickFive = function () {
-  points -= 35000;
+  points -= snakeCost;
   $("#number-of-clicks").text("You have " + points + " points");
   snakesBought += 1;
   $("#snakes-bought").text("You bought " + snakesBought + " snakes");
-  pointsSpent += 35000;
+  pointsSpent += snakeCost;
+  snakeCost += 7000;
+  $("#snake-cost").text("Snake cost: " + snakeCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -415,11 +491,13 @@ var increaseAutoClickFive = function () {
 
 var lizardsBought = 0;
 var increaseAutoClickSix = function () {
-  points -= 72000;
+  points -= lizardCost;
   $("#number-of-clicks").text("You have " + points + " points");
   lizardsBought += 1;
   $("#lizards-bought").text("You bought " + lizardsBought + " lizards");
-  pointsSpent += 72000;
+  pointsSpent += lizardCost;
+  lizardCost += 14400;
+  $("#lizard-cost").text("Lizard cost: " + lizardCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -446,11 +524,13 @@ var increaseAutoClickSix = function () {
 
 var sharksBought = 0;
 var increaseAutoClickSeven = function () {
-  points -= 200000;
+  points -= sharkCost;
   $("#number-of-clicks").text("You have " + points + " points");
   sharksBought += 1;
   $("#sharks-bought").text("You bought " + sharksBought + " sharks");
-  pointsSpent += 200000;
+  pointsSpent += sharkCost;
+  sharkCost += 40000;
+  $("#shark-cost").text("Shark cost: " + sharkCost);
   $("#points-spent").text("Points spent: " + pointsSpent);
   showAutoClick();
   showAutoClickTwo();
@@ -715,62 +795,6 @@ var bullClicked = function () {
 
 $("#reset-points").on("click", function () {
   window.location.assign(window.location.href); //Refreshes the page and all the values are cleared
-});
-
-$("#auto-click").on("click", function () {
-  increaseAutoClick();
-  showAutoClick();
-});
-
-$("#auto-click-2").on("click", function () {
-  increaseAutoClickTwo();
-  showAutoClickTwo();
-  showAutoClick();
-});
-
-$("#auto-click-3").on("click", function () {
-  increaseAutoClickThree();
-  showAutoClickThree();
-  showAutoClickTwo();
-  showAutoClick();
-});
-
-$("#auto-click-4").on("click", function () {
-  increaseAutoClickFour();
-  showAutoClickFour();
-  showAutoClickThree();
-  showAutoClickTwo();
-  showAutoClick();
-});
-
-$("#auto-click-5").on("click", function () {
-  increaseAutoClickFive();
-  showAutoClickFive();
-  showAutoClickFour();
-  showAutoClickThree();
-  showAutoClickTwo();
-  showAutoClick();
-});
-
-$("#auto-click-6").on("click", function () {
-  increaseAutoClickSix();
-  showAutoClickSix();
-  showAutoClickFive();
-  showAutoClickFour();
-  showAutoClickThree();
-  showAutoClickTwo();
-  showAutoClick();
-});
-
-$("#auto-click-7").on("click", function () {
-  increaseAutoClickSeven();
-  showAutoClickSeven();
-  showAutoClickSix();
-  showAutoClickFive();
-  showAutoClickFour();
-  showAutoClickThree();
-  showAutoClickTwo();
-  showAutoClick();
 });
 
 $("#plane").on("click", function () {
