@@ -1,15 +1,29 @@
+@import "./variables";
 body {
-  background-image: linear-gradient(-45deg, yellow, blue, #fa912d, magenta, white);
+  background-image: linear-gradient(-45deg, $background);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 }
 
-tr, td, th {
-  border: solid 2px #00a2ff;
+tr,td,th {
+  border: solid 2px rgb(0, 162, 255);
 }
 
 @-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -33,54 +47,56 @@ tr, td, th {
   }
 }
 
+
 h1,
 h2 {
-  color: white;
+  color: $textColor;
   font-family: "impact", serif;
 }
 
 p {
-  color: white;
+  color: $textColor;
 }
 
 a {
-  color: lime;
+  color: rgb(0, 255, 0);
 }
 
 b {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 
 table {
-  color: blue;
+  color: rgb(0, 0, 255);
   margin: auto;
 }
 
 button {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
+  &:hover, &:focus{
+    background-color: $textColor;
+  }
 }
 
-button:hover, button:focus {
-  background-color: white;
-}
+
 
 a:active {
-  background-color: #ff7f00;
-  color: cyan;
+  background-color: rgb(255, 127, 0);
+  color: rgb(0, 255, 255);
 }
 
 #reset-points {
-  border: 6px double blue;
-  color: blue;
+  border: 6px double rgb(0, 0, 255);
+  color: rgb(0, 0, 255);
 }
 
 #auto-click-heading {
-  color: red;
+  color: rgb(255, 0, 0);
   position: absolute;
 }
 
 #auto-clicks-container {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
   width: 30%;
   height: 400px;
   overflow-y: auto;
@@ -88,7 +104,7 @@ a:active {
 }
 
 #click-table {
-  background-color: #739b9b;
+  background-color: rgb(115, 155, 155);
   height: 300px;
   width: 300px;
   overflow-y: auto;
@@ -96,25 +112,24 @@ a:active {
 }
 
 #how-to-play {
-  color: white;
+  color: $textColor;
 }
 
 #hide-stats, #show-stats {
-  color: lime;
+  color: $statColor;
   width: 77px;
-}
-
-#hide-stats:hover, #show-stats:hover {
-  color: blue;
-  text-decoration: underline;
+  &:hover {
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+  }
 }
 
 #stats-heading {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 
 .stats {
-  color: white;
+  color: $textColor;
 }
 
 .auto-clicks {
@@ -125,7 +140,7 @@ a:active {
 }
 
 .auto-click-text {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 
 .pic {
@@ -133,23 +148,21 @@ a:active {
 }
 
 .type-of-origami {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 
 .number-of-points {
-  background-color: #ff7f00;
+  background-color: rgb(255, 127, 0);
 }
 
 .required-to-unlock,
 .cost {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
 }
 
 .can-buy-autoclick {
-  color: white;
+  color: $textColor;
+  strong {
+    color: rgb(255, 0, 0);
+  }
 }
-
-.can-buy-autoclick strong {
-  color: red;
-}
-/*# sourceMappingURL=origamistyle.css.map */
